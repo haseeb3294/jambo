@@ -298,7 +298,7 @@ function PageContent() {
             console.log('QR API CALL')
             const generateQRCode = async () => {
                 try {
-                  const response = await fetch('https://cmjbuggy.com/api/generateQRCode', {
+                  const response = await fetch('https://jambo-ashy.vercel.app/api/generateQRCode', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
