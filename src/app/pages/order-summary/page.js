@@ -93,7 +93,7 @@ function PageContent() {
         };
         console.log(formData)
         try {
-            const response = await fetch('https://cmjbuggy.com//api/bookingMail', {
+            const response = await fetch('https://jambo-ashy.vercel.app/api/bookingMail', {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -289,7 +289,7 @@ function PageContent() {
             const generateQRCode = async () => {
                 const value = reserveNumber + '+START'
                 try {
-                  const response = await fetch('https://cmjbuggy.com/api/generateQRCode', {
+                  const response = await fetch('https://jambo-ashy.vercel.app/api/generateQRCode', {
                     method: 'POST',
                     headers: {
                       'Content-Type': 'application/json',
