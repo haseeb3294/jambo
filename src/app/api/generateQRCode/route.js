@@ -1,6 +1,5 @@
 // pages/api/generateQRCode.js
 
-import qr from 'qrcode';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -13,11 +12,8 @@ export async function POST(request) {
     // Generate a random file name
     const filename = `${uuidv4()}-${Date.now()}`;
 
-    // Generate QR code as a data URL
-    const qrDataUrl = await qr.toDataURL(data);
-
     // Extract base64 data
-    const base64Data = qrDataUrl.replace(/^data:image\/png;base64,/, '');
+    const base64Data = data.replace(/^data:image\/png;base64,/, '');
 
     // Create folder if not exists
     const folderPath = path.join(process.cwd(), 'public', 'qr');
